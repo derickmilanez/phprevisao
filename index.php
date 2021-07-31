@@ -1,31 +1,16 @@
-<?php
-
-$categorias = [];
-$categorias[] = 'Infantil';
-$categorias[] = 'Adolescente';
-$categorias[] = 'Adulto';
-$categorias[] = 'Idoso';
-$categorias[] = 'Nao pode competir';
-
-
-$nome = 'Derick';
-$idade = 71;
-
-//var_dump($nome);
-//var_dump($idade);
-//print_r($categorias);
-
-if($idade >= 6 && $idade <= 12){
-
-}else if($idade >= 6 && $idade <= 12){
-    echo $categorias[0];
-}else if($idade >= 13 && $idade <= 18){
-    echo $categorias[1];
-}else if($idade >= 19 && $idade <= 59){
-    echo $categorias[2];
-}else if($idade >= 60 && $idade <= 70){
-    echo $categorias[3];
-}else{
-    echo $categorias[4];
-}
-?>
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Formulário de Inscrição</title>
+    <meta name="author" content="Derick Milanez">
+    <meta name="description" content="Formulário de inscrição para participar do torneio de natação">
+    <meta name="viewport" content="width-device-width, initial-scale=1">
+</head>
+<body>
+    <p>Formulário para inscrição de competidores</p>
+    <form action="script.php" method="POST">
+        <p>Seu nome: <input type="text" name="nome"></p>
+        <p>Sua idade: <input type="text" name="idade"></p>
+        <p>Clique aqui para <input type="submit"></p>
+    </form>
+</body>

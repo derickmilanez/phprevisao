@@ -1,3 +1,7 @@
+<?php
+    include "servicos/servicoMensagemSessao.php";
+?>
+
 <!DOCTYPE html>
 <head>
     <meta charset="utf-8">
@@ -9,6 +13,17 @@
 <body>
     <p>Formulário para inscrição de competidores</p>
     <form action="script.php" method="POST">
+        <?php
+            $mensagemDeSucesso = getMensagemDeSucesso();
+            if(!empty($mensagemDeSucesso)){
+                 echo $mensagemDeSucesso;
+            }
+
+           $mensagemDeErro = getMensagemDeErro();
+           if(!empty($mensagemDeErro)){
+                echo $mensagemDeErro;
+           }
+        ?>
         <p>Seu nome: <input type="text" name="nome"></p>
         <p>Sua idade: <input type="text" name="idade"></p>
         <p>Clique aqui para <input type="submit"></p>
